@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    Flow Analytics
+    <button mat-button (click)="authService.signOut()"><mat-icon>exit_to_app</mat-icon> Sign out</button>
+</mat-toolbar>
+<div class="map">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+        <agm-marker 
+            *ngFor="let sensor of sensors; let i = index"
+            (markerClick)="viewSensor(sensor)"
+            [latitude]="sensor.location.lat"
+            [longitude]="sensor.location.lng"
+            [label]="i.toString()"
+            class="marker">
+        </agm-marker>
+    </agm-map>
+</div>
+<button mat-fab [disabled]="sensors === null" (click)="findCenter()" color="primary" class="center">
+    <mat-icon>gps_fixed</mat-icon>
+</button>

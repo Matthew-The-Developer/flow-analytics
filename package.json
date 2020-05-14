@@ -11,16 +11,24 @@
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^1.1.0",
     "@angular/animations": "~9.1.3",
     "@angular/cdk": "^9.2.3",
     "@angular/common": "~9.1.3",
     "@angular/compiler": "~9.1.3",
     "@angular/core": "~9.1.3",
+    "@angular/fire": "^6.0.0",
     "@angular/forms": "~9.1.3",
+    "@angular/google-maps": "^9.2.3",
     "@angular/material": "^9.2.3",
     "@angular/platform-browser": "~9.1.3",
     "@angular/platform-browser-dynamic": "~9.1.3",
     "@angular/router": "~9.1.3",
+    "@googlemaps/google-maps-services-js": "^2.6.0",
+    "@swimlane/ngx-charts": "^14.0.0",
+    "@tensorflow-models/knn-classifier": "^1.2.2",
+    "@tensorflow/tfjs": "^1.7.4",
+    "firebase": "^7.14.3",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -44,6 +52,11 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.8.3"
+    "typescript": "~3.8.3",
+    "@angular-devkit/architect": "~0.900",
+    "firebase-tools": "^8.0.0",
+    "fuzzy": "^0.1.3",
+    "inquirer": "^6.2.2",
+    "inquirer-autocomplete-prompt": "^1.0.1"
   }
 }

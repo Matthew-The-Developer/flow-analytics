@@ -1,32 +1,121 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat-core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$flow-primary: mat-palette($mat-indigo);
-$flow-accent: mat-palette($mat-pink, A200, A100, A400);
+$flow-white: #f4f1de;
+$flow-orange: #e07a5f;
+$flow-black: #3d405b;
+$flow-mint: #81b29a;
+$flow-stucko: #f2cc8f;
 
-// The warn palette is optional (defaults to red).
-$flow-warn: mat-palette($mat-red);
+$flow-primary: (
+    50 : #f0f6f3,
+    100 : #d9e8e1,
+    200 : #c0d9cd,
+    300 : #a7c9b8,
+    400 : #94bea9,
+    500 : #81b29a,
+    600 : #79ab92,
+    700 : #6ea288,
+    800 : #64997e,
+    900 : #518a6c,
+    A100 : #edfff6,
+    A200 : #baffdb,
+    A400 : #87ffc0,
+    A700 : #6effb3,
+    contrast: (
+        50 : $flow-black,
+        100 : $flow-black,
+        200 : $flow-black,
+        300 : $flow-black,
+        400 : $flow-black,
+        500 : $flow-black,
+        600 : $flow-black,
+        700 : $flow-black,
+        800 : $flow-black,
+        900 : $flow-white,
+        A100 : $flow-black,
+        A200 : $flow-black,
+        A400 : $flow-black,
+        A700 : $flow-black,
+    )
+);
 
-// Create the theme object (a Sass map containing all of the palettes).
-$flow-theme: mat-light-theme($flow-primary, $flow-accent, $flow-warn);
+$flow-accent: (
+    50 : #fdf9f2,
+    100 : #fbf0dd,
+    200 : #f9e6c7,
+    300 : #f6dbb1,
+    400 : #f4d4a0,
+    500 : #f2cc8f,
+    600 : #f0c787,
+    700 : #eec07c,
+    800 : #ecb972,
+    900 : #e8ad60,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #fff7ed,
+    A700 : #ffecd4,
+    contrast: (
+        50 : $flow-black,
+        100 : $flow-black,
+        200 : $flow-black,
+        300 : $flow-black,
+        400 : $flow-black,
+        500 : $flow-black,
+        600 : $flow-black,
+        700 : $flow-black,
+        800 : $flow-black,
+        900 : $flow-black,
+        A100 : $flow-black,
+        A200 : $flow-black,
+        A400 : $flow-black,
+        A700 : $flow-black,
+    )
+);
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
+$flow-warn: (
+    50 : #fbefec,
+    100 : #f6d7cf,
+    200 : #f0bdaf,
+    300 : #e9a28f,
+    400 : #e58e77,
+    500 : #e07a5f,
+    600 : #dc7257,
+    700 : #d8674d,
+    800 : #d35d43,
+    900 : #cb4a32,
+    A100 : #ffffff,
+    A200 : #ffe3de,
+    A400 : #ffb7ab,
+    A700 : #ffa191,
+    contrast: (
+        50 : $flow-black,
+        100 : $flow-black,
+        200 : $flow-black,
+        300 : $flow-black,
+        400 : $flow-black,
+        500 : $flow-black,
+        600 : $flow-black,
+        700 : $flow-black,
+        800 : $flow-white,
+        900 : $flow-white,
+        A100 : $flow-black,
+        A200 : $flow-black,
+        A400 : $flow-black,
+        A700 : $flow-black,
+    )
+);
+
+$primary: mat-palette($flow-primary);
+$accent: mat-palette($flow-accent);
+$warn: mat-palette($flow-warn);
+
+$flow-theme: mat-light-theme($primary, $accent, $warn);
+
 @include angular-material-theme($flow-theme);
 
-/* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

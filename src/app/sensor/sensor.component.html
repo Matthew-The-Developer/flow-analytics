@@ -1,0 +1,75 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button routerLink="/map"><mat-icon>arrow_back_ios</mat-icon></button>
+    Flow Analytics
+    <button mat-button (click)="authService.signOut()"><mat-icon>exit_to_app</mat-icon> Sign out</button>
+</mat-toolbar>
+
+<div class="charts">
+    <mat-tab-group dynamicHeight (selectedTabChange)="update()">
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">gradient</mat-icon> Level
+            </ng-template>
+
+            <ngx-charts-area-chart
+                [view] = ""
+                [scheme]="levelScheme"
+                showXAxisLabel="true"
+                showYAxisLabel="true"
+                xAxis="true"
+                yAxis="true"
+                [xAxisLabel]="levelAxis[0]"
+                [yAxisLabel]="levelAxis[1]"
+                [yScaleMin]="levelBounds[0]"
+                [yScaleMax]="levelBounds[1]"
+                timeline="true"
+                [activeEntries]="levelActive"
+                [results]="level">
+            </ngx-charts-area-chart>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">opacity</mat-icon> Volume
+            </ng-template>
+
+            <ngx-charts-area-chart
+                [view] = ""
+                [scheme]="volumeScheme"
+                showXAxisLabel="true"
+                showYAxisLabel="true"
+                xAxis="true"
+                yAxis="true"
+                [xAxisLabel]="volumeAxis[0]"
+                [yAxisLabel]="volumeAxis[1]"
+                [yScaleMin]="volumeBounds[0]"
+                [yScaleMax]="volumeBounds[1]"
+                timeline="true"
+                [results]="volume">
+            </ngx-charts-area-chart>
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">waves</mat-icon> Flow
+            </ng-template>
+    
+            <ngx-charts-area-chart
+                [view] = ""
+                [scheme]="flowScheme"
+                showXAxisLabel="true"
+                showYAxisLabel="true"
+                xAxis="true"
+                yAxis="true"
+                [xAxisLabel]="flowAxis[0]"
+                [yAxisLabel]="flowAxis[1]"
+                [yScaleMin]="flowBounds[0]"
+                [yScaleMax]="flowBounds[1]"
+                timeline="true"
+                [results]="flow">
+            </ngx-charts-area-chart>
+        </mat-tab>
+    </mat-tab-group>
+</div>
+
+

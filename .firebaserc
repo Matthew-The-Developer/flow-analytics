@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "flow-analytics-11625": {
+      "hosting": {
+        "flow": [
+          "flow-analytics-11625"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+mat-toolbar {
+    display: flex;
+    flex-direction: row;
+
+    button:first-of-type {
+        margin-left: auto;
+    }
+}
+
+.map {
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    width: 100%; 
+
+    agm-map {
+        width: 100%;
+        height: 100%;
+
+        .marker {
+            z-index: 110;
+        }
+    }
+}
+
+.center {
+    position: absolute;
+    bottom: 32px;
+    left: 8px;
+}
