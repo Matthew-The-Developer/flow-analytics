@@ -41,7 +41,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     AngularFireAuthModule, // auth
     AngularFireStorageModule, // storage
     
-    AgmCoreModule.forRoot({ apiKey: 'AIzaSyDx3gbWgvZaM3Jo88E87k6qo3dN-PsQ84c' }),
+    AgmCoreModule.forRoot({ apiKey: environment.maps.api }),
     
     NgxChartsModule,
   ],

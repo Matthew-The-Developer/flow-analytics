@@ -12,6 +12,10 @@ export const environment = {
     measurementId: "G-08VVDZBKCE"
   },
 
+  maps: {
+    api: ''
+  },
+
   visualcrossing: {
     api: 'J85JMLD1QN8I6IY9RYANCTVR5'
   }
